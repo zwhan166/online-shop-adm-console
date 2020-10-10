@@ -1,0 +1,24 @@
+<div class="row">
+    <div id="search-result-table" class="table-responsive">
+        <table class="table table-sm table-striped table-hover">
+            <thead>
+                <tr>
+                    <th scope="col" class="text-center">#</th>
+                    <th scope="col">Short Name</th>
+                    <th scope="col">Specification</th>
+                    <th scope="col" class="text-center">Price</th>
+                    <th scope="col" class="text-center">Discount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of article_data">
+                    <th scope="row" class="text-center"> {{item.articleId}} </th>
+                    <td> {{item.abbreviationName}} </td>
+                    <td> {{item.specification}} </td>
+                    <td class="text-center"> {{item.price | currency: 'EUR'}} </td>
+                    <td class="text-center"> {{item.discount | percent}} </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

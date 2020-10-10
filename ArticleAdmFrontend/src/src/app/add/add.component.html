@@ -1,0 +1,99 @@
+<div *ngIf="is_visible" style="margin-top: 20px;">
+    <form>
+        <div class="row pt-row">
+            <div class="input-group input-group-sm">
+                <div class="input-group-prepend pt-prefix">
+                    <span class="input-group-text pt-prefix">Abbreviation:</span>
+                </div>
+                <input type="text" class="form-control" placeholder="Article abbriation name" value="{{data.abbreviation_name}}">
+            </div>
+        </div>
+
+        <div class="row pt-row">
+            <div class="input-group input-group-sm">
+                <div class="input-group-prepend pt-prefix">
+                    <span class="input-group-text pt-prefix">Full Name:</span>
+                </div>
+                <input type="text" class="form-control" placeholder="Article full name" value="{{data.full_name}}">
+            </div>
+        </div>
+
+        <div class="row pt-row">
+            <div class="input-group input-group-sm">
+                <div class="input-group-prepend pt-prefix">
+                    <span class="input-group-text pt-prefix">Specification:</span>
+                </div>
+                <input type="text" class="form-control" placeholder="Specification" value="{{data.specification}}">
+            </div>
+        </div>
+
+        <div class="row pt-row">
+            <div class="input-group input-group-sm">
+                <div class="input-group-prepend pt-prefix">
+                    <span class="input-group-text pt-prefix">Creation Time:</span>
+                </div>
+                <input type="text" class="form-control" placeholder="Creation time" value="{{data.creation_time | date : 'yyyy/MM/dd HH:mm:ss'}}">
+            </div>
+        </div>
+
+        <div class="row pt-row">
+            <div class="input-group input-group-sm">
+                <div class="input-group-prepend pt-prefix">
+                    <span class="input-group-text pt-prefix">Update Time:</span>
+                </div>
+                <input type="text" class="form-control" placeholder="Update time" value="{{data.update_time | date : 'yyyy/MM/dd HH:mm:ss'}}">
+            </div>
+        </div>
+
+        <div class="row pt-row">
+            <div class="input-group input-group-sm">
+                <div class="input-group-prepend pt-prefix">
+                    <span class="input-group-text pt-prefix">Price:</span>
+                </div>
+                <input type="text" class="form-control" placeholder="Price" value="{{data.price | number : '.1-2'}}">
+                <div class="input-group-append pt-suffix">
+                    <span class="input-group-text pt-suffix">&euro;</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row pt-row">
+            <div class="input-group input-group-sm">
+                <div class="input-group-prepend pt-prefix">
+                    <span class="input-group-text pt-prefix">Discount:</span>
+                </div>
+                <input type="text" class="form-control" placeholder="Discount" value="{{data.discount | percent}}">
+                <div class="input-group-append pt-suffix">
+                    <span class="input-group-text pt-suffix">%</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row pt-row">
+            <div class="input-group input-group-sm">
+                <div class="input-group-prepend pt-block">
+                    <span class="input-group-text pt-prefix">Description:</span>
+                </div>
+                <textarea class="form-control" rows="3" value="{{data.description}}"></textarea>
+            </div>
+        </div>
+
+        <div class="row pt-row">
+            <div class="input-group input-group-sm">
+                <div class="input-group-prepend pt-block">
+                    <span class="input-group-text pt-prefix">Comment:</span>
+                </div>
+                <textarea class="form-control" rows="3" value="{{data.comment}}"></textarea>
+            </div>
+        </div>
+
+        <div class="row pt-row">
+            <div class="btn-group btn-group-sm col-10 offset-1">
+                <button type="button" class="btn btn-outline-primary" (click)="generate_mock_data()">Mock Data</button>
+                <button type="button" class="btn btn-outline-primary" (click)="add_data()">Save</button>
+                <button type="button" class="btn btn-outline-primary">Clear</button>
+            </div>
+        </div>
+
+    </form>
+</div>

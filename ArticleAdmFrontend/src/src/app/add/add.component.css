@@ -1,0 +1,26 @@
+div.pt-row {
+    margin-top: 6px;
+    padding: 0px 20px;
+}
+
+div.pt-prefix {
+    width: 20%;
+}
+
+div.pt-suffix {
+    width: 20%;
+}
+
+div.pt-block {
+    width: 100%;
+}
+
+span.pt-prefix {
+    width: 100%;
+    font-weight: bold;
+}
+
+span.pt-suffix {
+    width: 100%;
+}
+
