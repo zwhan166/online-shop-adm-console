@@ -19,8 +19,9 @@ export class ArticleServiceService {
   }
 
   addArticleData(data) {
-    console.log("--- ArticleService::addArticleData() --- " + data);
-    this.http.post(this.apiurl, data);
+    this.http.post(this.apiurl, data, {observe: 'response'}).subscribe(resp => {
+      console.log(resp);
+    });
   }
 
 }

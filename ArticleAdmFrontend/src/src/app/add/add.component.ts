@@ -52,8 +52,19 @@ export class AddComponent implements OnInit {
   }
 
   add_data() {
-    console.log(this.data);
-    this.article_service.addArticleData(this.data);
+    var elem = document.getElementById('abbreviation_name');
+    console.log(elem.nodeValue);
+
+    var data_to_post = {
+      "abbreviationName": this.data.abbreviation_name,
+      "fullName": this.data.full_name,
+      "specification": this.data.specification,
+      "creationDatetime": this.data.creation_time,
+      "updateDatetime": this.data.update_time,
+      "price": this.data.price,
+      "discount": this.data.discount
+    };
+    this.article_service.addArticleData(data_to_post);
   }
 
 }
